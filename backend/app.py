@@ -17,7 +17,7 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
     return response
 
-client = genai.Client(api_key=os.getenv('AQ.Ab8RN6KZrvg4yLIWDQ6kWWqcJkJe7y9GNckG0jIVJezgLKhDnw'))
+client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
 
 @app.route('/')
 def home():
@@ -56,6 +56,7 @@ def generate_quiz():
         return jsonify({}), 200
     try:
         data = request.json
+        print("QUIZ REQUEST RECEIVED:", data)  # add this line
         text = data['text']
         difficulty = data['difficulty']
         num_questions = data['num_questions']
