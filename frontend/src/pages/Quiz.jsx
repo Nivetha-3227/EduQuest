@@ -17,7 +17,7 @@ function Quiz() {
     const fetchQuiz = async () => {
       const text = localStorage.getItem('pdfText')
       const config = JSON.parse(localStorage.getItem('quizConfig'))
-      const res = await axios.post('http://127.0.0.1:5000/api/generate-quiz', {
+      const res = await axios.post('https://eduquest-u5ah.onrender.com/api/generate-quiz', {
         text, difficulty: config.difficulty, num_questions: config.questions
       })
       setQuestions(res.data)

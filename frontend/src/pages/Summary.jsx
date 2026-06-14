@@ -10,7 +10,7 @@ function Summary() {
   useEffect(() => {
     const fetchSummary = async () => {
       const text = localStorage.getItem('pdfText')
-      const res = await axios.post('http://127.0.0.1:5000/api/summarize', { text })
+      const res = await axios.post('https://eduquest-u5ah.onrender.com/api/summarize', { text })
       setSummary(res.data.summary)
       setLoading(false)
     }

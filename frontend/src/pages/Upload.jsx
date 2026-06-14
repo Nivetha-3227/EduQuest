@@ -13,7 +13,7 @@ function Upload() {
     try {
       const formData = new FormData()
       formData.append('pdf', file)
-      const res = await axios.post('http://127.0.0.1:5000/api/upload-pdf', formData)
+      const res = await axios.post('https://eduquest-u5ah.onrender.com/api/upload-pdf', formData)
       localStorage.setItem('pdfText', res.data.text)
       localStorage.setItem('pdfName', file.name)
       setLoading(false)
