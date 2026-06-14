@@ -31,6 +31,7 @@ function Quiz() {
     if (timeLeft === 0) handleNext()
     const timer = setTimeout(() => setTimeLeft(t => t - 1), 1000)
     return () => clearTimeout(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, started, loading])
 
   const handleAnswer = (option) => {
