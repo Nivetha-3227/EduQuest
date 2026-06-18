@@ -1,0 +1,22 @@
+{
+  "room_theme": "The Alchemist's Dungeon",
+  "total_stages": 2,
+  "stages": [
+    {
+      "stage_id": 1,
+      "stage_name": "The Rusty Lock",
+      "riddle": "I am a subatomic particle with a negative charge. What am I?",
+      "puzzle_type": "text_input",
+      "correct_answer": "electron",
+      "hint": "I orbit the nucleus."
+    },
+    {
+      "stage_id": 2,
+      "stage_name": "The Chemical Vault",
+      "riddle": "What is the atomic number of Carbon?",
+      "puzzle_type": "text_input",
+      "correct_answer": "6",
+      "hint": "It is between Boron (5) and Nitrogen (7)."
+    }
+  ]
+}
